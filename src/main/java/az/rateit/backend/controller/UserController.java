@@ -18,6 +18,11 @@ public class UserController {
 
     @PostMapping("/add")
     public void addUser(@RequestBody UserResponse userResponse){
-        System.out.println(userResponse.getUserName());
+        System.out.println(userResponse.getUserName() + " added");
+    }
+
+    @PutMapping("/update")
+    public void updateUser(@RequestBody UserResponse userResponse){
+        System.out.println(userResponse.getUserName() + " updated");
     }
 }
