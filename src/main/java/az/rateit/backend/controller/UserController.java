@@ -15,4 +15,9 @@ public class UserController {
     public UserResponse getUser(@PathVariable Long id, @RequestParam String name){
         return userService.getUser(id);
     }
+
+    @PostMapping("/add")
+    public void addUser(@RequestBody UserResponse userResponse){
+        System.out.println(userResponse.getUserName());
+    }
 }
