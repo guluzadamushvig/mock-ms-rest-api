@@ -25,4 +25,9 @@ public class UserController {
     public void updateUser(@RequestBody UserResponse userResponse){
         System.out.println(userResponse.getUserName() + " updated");
     }
+
+    @DeleteMapping("/delete")
+    public void deleteUser(@RequestBody UserResponse userResponse){
+        System.out.println(userResponse.getUserName() + " deleted");
+    }
 }
